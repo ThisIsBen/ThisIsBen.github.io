@@ -1,23 +1,65 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Drag and Drop 範例</title>
+        <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../common/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="theme-headline">Drag and Drop sample</h1>
+            <div id="photo">
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
 
-<div class="home">
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
 
-  <h1 class="page-heading">Posts</h1>
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+            </div>
+        </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <script src="Sortable.js"></script>
+        <script>
+        var pageLists = document.getElementById('photo').getElementsByClassName('group-list');
 
-</div>
+        for (var i = 0, length = pageLists.length; i < length; i += 1) {
+            new Sortable(pageLists[i], {
+                group: 'photo'
+            });
+        }
+        </script>
+    </body>
+</html>
