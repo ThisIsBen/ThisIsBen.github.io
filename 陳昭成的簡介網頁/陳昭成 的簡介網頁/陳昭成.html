@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>陳昭成的簡介</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+        a img {
+            border: none;
+            vertical-align: middle;
+        }
+
+        #abgne-block-20110112 {
+            position: relative;
+            width: 600px;
+            height: 420px;
+            overflow: hidden;
+        }
+
+            #abgne-block-20110112 .bd .info {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+            }
+
+                #abgne-block-20110112 .bd .info .desc {
+                    height: 45px;
+                    font-size: 24px;
+                    line-height: 45px;
+                    padding-left: 10px;
+                    text-align: right;
+                    overflow: hidden;
+                }
+
+            #abgne-block-20110112 .bd .first .desc {
+                background: #09c;
+                color: #fff;
+                text-align: left;
+            }
+
+            #abgne-block-20110112 .bd .first {
+                width: 300px;
+                z-index: 10;
+            }
+
+
+        h3 {
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            // 先取得 #abgne-block-20110112區塊及其寬
+            var $block = $('#abgne-block-20110112'),
+                _width = $block.width();
+
+            // 當滑鼠在 $block 上移動時
+            $block.mousemove(function (evt) {
+                // 取得目前滑鼠的 x 座標
+                var $this = $(this),
+                    _x = evt.pageX || evt.layerX;
+
+                // 計算位置使其不超出 $block
+                _x = _x <= 1 ? 0 : _x >= _width - 1 ? _width : _x;
+
+                // 控制 .first 區塊的寬度
+                $('.first', $block).css({
+                    width: _x
+                });
+            });
+        });
+
+
+
+
+
+
+</script>
+    <style>
+        .carousel-inner .de {
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            width: 100%;
+            display: none;
+            overflow: hidden;
+            color: #fff;
+            background: url(images/1px_black.png);
+        }
+
+            .carousel-inner .de h3 {
+                padding: 10px 10px 0;
+                font-size: 20px;
+                font-family: Kristen ITC;
+                color: #ccc;
+            }
+
+        p {
+            font-size: 25px;
+            color: orange;
+        }
+
+        .row ul li {
+            font-size: 25px;
+            color: orange;
+        }
+
+        .footer-blurb p {
+            color: white;
+            font-size: 18px;
+        }
+
+        .de p {
+            color: white;
+        }
+    </style>
+
+
+
+    <script>
+        $(function () {
+            // 把每一個 abgne-yahoo-slide 取出做處理
+            $('.carousel-inner').each(function () {
+                // 取得說明描述的高度
+                var $this = $(this),
+                    $desc = $this.find('.de'),
+                    _descHeight = $desc.outerHeight(true),
+                    _speed = 400;
+
+                // 設定 $desc 的高度為 0 並顯示
+                $desc.css({
+                    height: 0,
+                    display: 'block'
+                });
+
+                // 當滑鼠移到區塊上時
+                $this.hover(function () {
+                    // 改變 $desc 的高度為原本高度
+                    $desc.stop().animate({
+                        height: _descHeight
+                    }, _speed);
+                }, function () {
+                    // 改變 $desc 的高度為 0
+                    $desc.stop().animate({
+                        height: 0
+                    }, _speed);
+                });
+            });
+        });
+
+
+</script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse text-right" id="navbar">
+                <ul class="nav navbar-nav text-right">
+                    <li class="active ">
+                        <a href="#" style="text-align: center;">Yo! 我是 陳昭成 ! Once you move the mouse over the  pictures in the picture carousell below, you can have the chance to know the secret of my personality. </a>
+                    </li>
+
+
+                </ul>
+
+                <!-- Search -->
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="jumbotron feature">
+        <div class="container">
+
+            <div id="feature-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#feature-carousel" data-slide-to="1"></li>
+                    <li data-target="#feature-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <a href="#">
+                            <img class="img-responsive" src="image/DSC04226.JPG" alt="">
+                        </a>
+
+                        <div class="de">
+                            <p>I was paddling the paddle board with my younger brother.</p>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>I'm good at cooperating with others</h3>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img class="img-responsive" src="image/csie.jpg" alt="">
+                        </a>
+
+
+                        <div class="de">
+                            <p>My lovely CSIE Department</p>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>My major is Computer Science</h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <a href="#">
+                            <img class="img-responsive" src="image/edo.jpg" alt="">
+                        </a>
+                        <div class="de">
+                            <p>我的TUSA好友Eduardo</p>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>I enjoy making friends around the world.</h3>
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img class="img-responsive" src="image/DSC07904.JPG" alt="">
+                        </a>
+                        <div class="de">
+                            <p>當地方法院法治營志工</p>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3>I love join volunteer program</h3>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#feature-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Content -->
+    <div class="container">
+
+        <!-- Page Intro -->
+        <div class="row page-intro">
+            <div class="col-lg-12">
+                <h1>你所不知道的 
+                   
+                    <small>學號:Q36064010_陳昭成</small>
+                   
+                </h1>
+                <p id="motto">
+                    此人 </br>
+				   個性忠厚,老實 ,謙卑 ,內斂 ,民主 ,愛國 </br>
+				   身長九呎七吋</br>
+				   以四海為家,以天地為師,以為天下開太平為己任,不斷奮鬥著,追尋著。
+				   
+				  
+                </p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Feature Row -->
+        <div class="row">
+            <article class="col-md-6 article-intro">
+                <div id="abgne-block-20110112">
+                    <div class="bd">
+                        <div class="info first">
+                            <div class="desc">Pull to the left!</div>
+                            <a href="#">
+                                <img src="image/DSC06901.JPG" /></a>
+                        </div>
+                        <div class="info">
+
+                            <a href="#">
+                                <img src="image/DSC04090.JPG" /></a>
+                        </div>
+                    </div>
+                </div>
+                <h3>
+                    <a href="#">陳昭成的簡介</a>
+                </h3>
+                <ul id="BenInfo">
+                    <li>國人稱我為: 陳昭成 ,</br>I'm known as Ben among foreign students</li>
+                    <li>學號:Q36064010</li>
+                    <li>家鄉: 亞洲 遠東地區 台灣 台南</li>
+                    <li>性格:我平時較內向膽怯 但在必要時刻我會鼓起勇氣接受挑戰 </li>
+
+                </ul>
+
+
+
+            </article>
+            <article class="col-md-6 article-intro">
+                <a href="#">
+                    <video width="500" controls>
+                        <source src="image/IMG_2438.MOV" type="video/mp4">
+                    </video>
+                </a>
+                <h3>
+                    <a href="#">Meet my pet fish!</a>
+                    
+                </h3>
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                
+
+
+                <div>
+                     <h3>
+                    <a href="#">If you think I'm a promising young man , please follow me on Github! </a>
+                    
+                    </h3>
+                     <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/ThisIsBen" data-size="large" aria-label="Follow @ThisIsBen on GitHub">Follow @ThisIsBen</a>
+                </div>
+                <p></p>
+            </article>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="footer-blurb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 footer-blurb-item">
+                        <img class="img-circle" src="image/download.jpg" alt="" width="100" height="100">
+                        <h3>I love Bugs ,but not those bugs in the programming</h3>
+                        <p>I believe that insects are the most wonderful design by Mother Nature .Small as they are,they can either jump very far ,fly very fast or even walk on the surface of water. Amazing is not enough to describe these creature.</p>
+
+                    </div>
+                    <div class="col-sm-4 footer-blurb-item">
+                        <img class="img-circle" src="image/images.jpg" alt="" width="100" height="100">
+                        <h3>I'm fond of 劍道</h3>
+                        <p>Although practicing 劍道 is kind of dangerous and exhausting ,I cultivate the braveness to cope with challenges from practicing it </p>
+
+                    </div>
+                    <div class="col-sm-4 footer-blurb-item">
+                        <img class="img-circle" src="image/imagespiano.jpg" alt="" width="100" height="100">
+                        <h3>I play the piano when I have leisure time</h3>
+                        <p>Playing the piano is one of the best way for me to get rid of the daily stress and express the ambition hidden in the corner of my heart.</p>
+
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport bug workaround -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Placeholder Images -->
+    <script src="js/holder.min.js"></script>
+
+</body>
+
+</html>
